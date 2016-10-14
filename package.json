@@ -1,0 +1,28 @@
+{
+  "name": "ng-mediumeditor",
+  "version": "0.0.0",
+  "description": "angularjs directive for mediumeditor",
+  "main": "ng-mediumeditor.js",
+  "repository": "attrs/ng-dnd",
+  "author": "joje <joje.attrs@gmail.com>",
+  "homepage": "https://github.com/attrs/ng-mediumeditor",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directive",
+    "directives",
+    "mediumeditor"
+  ],
+  "files": [
+    "*.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "angular": "^1.5.8"
+  },
+  "dependencies": {
+    "medium-editor": "^5.22.1"
+  }
+}
