@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "angularjs directive for mediumeditor",
   "main": "ng-mediumeditor.js",
-  "repository": "attrs/ng-dnd",
+  "repository": "attrs/ng-mediumeditor",
   "author": "joje <joje.attrs@gmail.com>",
   "homepage": "https://github.com/attrs/ng-mediumeditor",
   "license": "MIT",
