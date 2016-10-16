@@ -1,8 +1,7 @@
-# ng-dnd
-> An angularjs directives for html5 drag and drop events.
+# ng-mediumeditor
 
 ## Installation
 ```sh
-$ npm install ng-dnd --save
+$ npm install ng-mediumeditor --save
 ```
 
