@@ -15,7 +15,10 @@ function directive() {
     require: '?ngModel',
     restrict: 'AE',
     replace: true,
-    scope: { bindOptions: '=' },
+    scope: {
+      ngModel: '=',
+      bindOptions: '='
+    },
     template: '<div class="editable"></div>',
     link: function(scope, element, attrs, ngModel) {
       var defaultContentSrc = attrs['defaultContentSrc'];
@@ -55,11 +58,15 @@ function directive() {
       });
       
       ngModel.$render = function() {
-        element.html(ngModel.$viewValue || '');
+        var chtml = element.html();
+        var html = ngModel.$viewValue;
+        
+        if( chtml != html ) 
+          element.html(ngModel.$viewValue || '');
+        
         var placeholder = editor.getExtensionByName('placeholder');
-        if (placeholder) {
+        if (placeholder)
           placeholder.updatePlaceholder(element[0]);
-        }
       };
       
       ngModel.$isEmpty = function(value) {
@@ -73,7 +80,9 @@ function directive() {
       };
       
       editor.subscribe('editableInput', function(event, editable) {
-        ngModel.$setViewValue(editable.innerHTML.trim());
+        var html = editable.innerHTML.trim();
+        ngModel.$setViewValue(html);
+        attrs.ngChange && scope.$parent.$eval(attrs.ngChange, {$html: html});
       });
       
       scope.$watch('options', function(bindOptions) {
