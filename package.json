@@ -1,6 +1,6 @@
 {
   "name": "ng-mediumeditor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "angularjs directive for mediumeditor",
   "main": "ng-mediumeditor.js",
   "repository": "attrs/ng-mediumeditor",
